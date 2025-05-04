@@ -119,8 +119,7 @@ const Landing = () => {
                         {[
                             { name: "Home", ref: homeRef },
                             { name: "Design Thinking", ref: designThinkingRef },
-                            { name: "Projects", ref: designThinkingRef },
-                            { name: "Time Management", ref: timeManagementRef },
+                            { name: "Projects", ref: timeManagementRef },
                             { name: "Contact", ref: contactRef }
                         ].map((item) => (
                             <button
