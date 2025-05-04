@@ -104,7 +104,7 @@ const Landing = () => {
             {/* Three.js Canvas Background */}
             {/* Space Background */}
             <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full z-0 opacity-50" />
-
+            <div className="fixed inset-0 bg-gradient-to-b from-gray-950/70 via-gray-950/30 to-gray-950/70 z-1 pointer-events-none" />
             {/* Header */}
             <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-gray-800/50 shadow-sm">
                 <div className="container mx-auto px-6 py-3 flex justify-between items-center">
