@@ -105,11 +105,8 @@ const Landing = () => {
             {/* Space Background */}
             <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full z-0 opacity-50" />
 
-            {/* Gradient overlay */}
-            <div className="fixed inset-0 bg-gradient-to-b from-gray-950/70 via-gray-950/30 to-gray-950/70 z-1 pointer-events-none" />
-
             {/* Header */}
-            <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-gray-900/80 border-b border-gray-800/50 shadow-sm">
+            <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-gray-800/50 shadow-sm">
                 <div className="container mx-auto px-6 py-3 flex justify-between items-center">
                     <div className="flex items-center space-x-3">
                         <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-indigo-800 flex items-center justify-center shadow-lg">
@@ -118,24 +115,22 @@ const Landing = () => {
                         <span className="font-semibold text-xl text-gray-100 tracking-tight hidden sm:block">Design Thinking Lab</span>
                     </div>
 
-                    <nav className="hidden md:flex items-center space-x-6">
+                    <nav className="hidden md:flex items-center space-x-1  rounded-full px-4 py-2 border border-gray-800/50">
                         {[
                             { name: "Home", ref: homeRef },
                             { name: "Design Thinking", ref: designThinkingRef },
-                            { name: "Projects", ref: projectsRef },
+                            { name: "Projects", ref: designThinkingRef },
                             { name: "Time Management", ref: timeManagementRef },
                             { name: "Contact", ref: contactRef }
                         ].map((item) => (
                             <button
                                 key={item.name}
                                 onClick={() => scrollToSection(item.ref)}
-                                className="relative group px-3 py-2 transition-all duration-300"
+                                className="relative group px-4 py-2 transition-all duration-300 rounded-full"
                             >
-                                <span className="text-purple-300 group-hover:text-purple-400 transition-colors duration-300">
+                                <span className="text-purple-300 group-hover:text-white transition-colors duration-300 relative z-10">
                                     {item.name}
                                 </span>
-                                {/* Animated underline */}
-                                <span className="absolute bottom-0 left-0 h-0.5 bg-purple-400 w-0 group-hover:w-full transition-all duration-300 origin-left"></span>
                             </button>
                         ))}
                     </nav>
@@ -186,7 +181,7 @@ const Landing = () => {
             {/* Hero Section */}
             <section ref={homeRef} id="home" className="relative min-h-screen flex items-center justify-center px-6 pt-24 pb-16">
                 <div className="container mx-auto text-center relative z-10">
-                <h1 className="font-bold text-5xl md:text-7xl lg:text-8xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-indigo-600 leading-none md:leading-tight py-4">
+                    <h1 className="font-bold text-5xl md:text-7xl lg:text-8xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-indigo-600 leading-none md:leading-tight py-4">
                         Design Thinking
                     </h1>
                     <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto mb-10 leading-relaxed">
@@ -312,50 +307,55 @@ const Landing = () => {
                         </div>
 
                         <div className="project-visual relative">
-                            <div className="bg-gray-800/30 backdrop-blur-sm p-1 rounded-2xl border border-gray-700/50 shadow-xl transform transition-all duration-500 hover:scale-[1.02] hover:shadow-purple-500/20">
+                            <div className="py-6 sm:py-8 md:py-11 bg-gray-800/30 backdrop-blur-sm p-1 rounded-2xl border border-gray-700/50 shadow-xl transform transition-all duration-500 hover:scale-[1.02] hover:shadow-purple-500/20">
                                 <div className="relative rounded-xl overflow-hidden aspect-video bg-gradient-to-br from-gray-900 to-gray-800">
                                     {/* Placeholder for project image */}
                                     <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="text-center p-8">
-                                            <svg className="w-16 h-16 text-purple-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <div className="text-center p-4 sm:p-6 md:p-8">
+                                            <svg className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-purple-500 mx-auto mb-3 sm:mb-4"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                             </svg>
-                                            <h4 className="text-xl font-semibold text-purple-300 mb-2">Time Management App</h4>
-                                            <p className="text-gray-400">Interactive prototype showcasing our solution</p>
+                                            <h4 className="text-lg sm:text-xl md:text-xl font-semibold text-purple-300 mb-1 sm:mb-2">
+                                                Time Management App
+                                            </h4>
+                                            <p className="text-sm sm:text-base text-gray-400">
+                                                Interactive prototype showcasing our solution
+                                            </p>
                                         </div>
                                     </div>
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
-                                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                                    <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6">
                                         <a
                                             href="https://time-management-app-theta.vercel.app"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center px-6 py-2.5 bg-purple-600 rounded-lg text-white font-medium hover:bg-purple-700 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-md"
+                                            className="inline-flex items-center px-4 py-1.5 sm:px-5 py-2 md:px-6 md:py-2.5 bg-purple-600 rounded-lg text-white font-medium hover:bg-purple-700 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-md text-sm sm:text-base"
                                         >
                                             <span>Visit Project</span>
-                                            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                             </svg>
                                         </a>
                                     </div>
                                 </div>
 
-                                <div className="mt-4 flex justify-between items-center p-4">
-                                    <div>
-                                        <h4 className="font-medium text-purple-300">Time Management Solution</h4>
-                                        <p className="text-sm text-gray-400">Finding the root cause of mishaps in time management</p>
+                                <div className="mt-3 sm:mt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center p-3 sm:p-4 space-y-2 sm:space-y-0">
+                                    <div className="flex-1">
+                                        <h4 className="font-medium text-purple-300 text-sm sm:text-base">Time Management Solution</h4>
+                                        <p className="text-xs sm:text-sm text-gray-400">Finding the root cause of mishaps in time management</p>
                                     </div>
-                                    <div className="flex space-x-2">
-                                        <span className="px-3 py-1 bg-gray-700/50 rounded-md text-xs text-gray-300">React</span>
-                                        <span className="px-3 py-1 bg-gray-700/50 rounded-md text-xs text-gray-300">Tailwind</span>
-                                        <span className="px-3 py-1 bg-gray-700/50 rounded-md text-xs text-gray-300">GSAP</span>
+                                    <div className="flex space-x-1 sm:space-x-2">
+                                        <span className="px-2 py-0.5 sm:px-3 sm:py-1 bg-gray-700/50 rounded-md text-xs text-gray-300">React</span>
+                                        <span className="px-2 py-0.5 sm:px-3 sm:py-1 bg-gray-700/50 rounded-md text-xs text-gray-300">Tailwind</span>
+                                        <span className="px-2 py-0.5 sm:px-3 sm:py-1 bg-gray-700/50 rounded-md text-xs text-gray-300">GSAP</span>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Decorative elements */}
-                            <div className="absolute -top-8 -right-8 w-20 h-20 bg-purple-600/10 rounded-full blur-xl z-0"></div>
-                            <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-indigo-600/10 rounded-full blur-xl z-0"></div>
+                            {/* Decorative elements - adjusted for mobile */}
+                            <div className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 md:-top-8 md:-right-8 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-purple-600/10 rounded-full blur-xl z-0"></div>
+                            <div className="absolute -bottom-6 -left-6 sm:-bottom-8 sm:-left-8 md:-bottom-10 md:-left-10 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-indigo-600/10 rounded-full blur-xl z-0"></div>
                         </div>
                     </div>
 
