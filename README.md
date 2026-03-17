@@ -1,175 +1,125 @@
-# Design Thinking Lab 🎨💡
+﻿<div align="center">
+  <img src="./public/dt-logo.svg" alt="Design Thinking Lab logo" width="88" />
+  <h1>Design Thinking Lab</h1>
+  <p>
+    Interactive showcase of the <strong>5-stage Design Thinking framework</strong>,
+    brought to life through a real product case study: a Time Management App.
+  </p>
+</div>
 
-**A comprehensive showcase of design thinking principles and methodologies learned during my 4th semester Design Thinking course**
+<p align="center">
+  <a href="https://design-thinking-lab.vercel.app">
+    <img src="https://img.shields.io/badge/Live%20Site-design--thinking--lab.vercel.app-0B3D2E?style=for-the-badge" alt="Live site badge" />
+  </a>
+  <a href="https://time-management-app-theta.vercel.app">
+    <img src="https://img.shields.io/badge/Case%20Study-Live%20Time%20Management%20App-1E6F9F?style=for-the-badge" alt="Case study app badge" />
+  </a>
+  <img src="https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react" alt="React 19 badge" />
+  <img src="https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 6 badge" />
+  <img src="https://img.shields.io/badge/Three.js-0.176-black?style=for-the-badge&logo=three.js" alt="Three.js badge" />
+</p>
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-purple?style=for-the-badge)](https://design-thinking-lab.vercel.app)
-[![React](https://img.shields.io/badge/React-19.0.0-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-6.3.1-green?style=for-the-badge&logo=vite)](https://vitejs.dev/)
-[![Three.js](https://img.shields.io/badge/Three.js-0.176.0-black?style=for-the-badge&logo=three.js)](https://threejs.org/)
+## Why This Project
 
-## 🌟 Project Overview
+This repository documents a semester Design Thinking journey from research to prototyping and iteration.  
+The core output is a polished website that communicates both the process and a practical solution for time-management challenges faced by students.
 
-This repository contains my capstone project for the Design Thinking course, featuring an interactive web application that demonstrates the complete design thinking process and showcases a real-world implementation through a **Time Management App**. The project reflects my journey through the five stages of design thinking and presents key insights gained during the course.
+## Experience Links
 
-## 🎯 What is Design Thinking?
+| Experience | URL | Purpose |
+| --- | --- | --- |
+| Main Showcase | https://design-thinking-lab.vercel.app | Explore the complete design thinking narrative |
+| Time Management App | https://time-management-app-theta.vercel.app | Interact with the case study prototype |
 
-Design Thinking is a human-centered approach to innovation that integrates the needs of people, the possibilities of technology, and requirements for business success. This project demonstrates the five-stage process:
+## Design Thinking Flow
 
-### 🔄 The Five Stages
-
-1. **🤝 Empathize** - Understanding user needs, experiences, and challenges
-2. **📝 Define** - Clearly articulating the problem statement
-3. **💡 Ideate** - Generating creative solutions and ideas
-4. **🛠️ Prototype** - Building representations of potential solutions
-5. **✅ Test** - Gathering feedback and refining solutions
-
-## 🚀 Featured Project: Time Management App
-
-The centerpiece of this repository is a **Time Management Application** that addresses procrastination and time management challenges faced by students and professionals.
-
-### 🎯 Problem Statement
-Managing multiple tasks within limited time while battling procrastination is a common challenge that affects productivity, creates stress, and impacts overall well-being.
-
-### 💡 Our Solution
-An interactive application that helps users:
-- ✅ Identify root causes of time management issues
-- 📊 Track and analyze time usage patterns
-- 🎯 Implement customized strategies to overcome procrastination
-- 📈 Set realistic goals and track progress over time
-
-### 🔗 [**View Live Time Management App**](https://time-management-app-theta.vercel.app)
-
-## 🛠️ Technical Implementation
-
-### **Frontend Technologies**
-- **React 19.0.0** - Modern UI library with latest features
-- **Vite 6.3.1** - Lightning-fast build tool and development server
-- **Three.js 0.176.0** - 3D graphics for interactive space background
-- **GSAP 3.13.0** - Professional-grade animations
-- **Tailwind CSS** - Utility-first CSS framework
-- **React Intersection Observer** - Smooth scroll animations
-
-### **Key Features**
-- 🌌 **Interactive 3D Space Background** - Immersive particle system using Three.js
-- 📱 **Responsive Design** - Mobile-first approach with seamless cross-device experience
-- 🎬 **Smooth Animations** - GSAP-powered transitions and scroll effects
-- 🎨 **Modern UI/UX** - Clean, professional design with gradient accents
-- 🔍 **Interactive Sections** - Scroll-triggered animations and content reveals
-
-## 📁 Project Structure
-
-```
-design-thinking/
-├── public/
-│   ├── dt.png                 # Custom favicon
-│   └── vite.svg              # Vite logo
-├── src/
-│   ├── assets/
-│   │   └── react.svg         # React logo
-│   ├── App.jsx               # Main application component
-│   ├── main.jsx              # Application entry point
-│   ├── root.jsx              # Core landing page component
-│   ├── App.css               # Application styles
-│   └── index.css             # Global styles
-├── index.html                # HTML template
-├── package.json              # Dependencies and scripts
-├── vite.config.js            # Vite configuration
-├── eslint.config.js          # ESLint configuration
-├── vercel.json               # Vercel deployment config
-└── README.md                 # Project documentation
+```mermaid
+flowchart LR
+    A[Empathize] --> B[Define]
+    B --> C[Ideate]
+    C --> D[Prototype]
+    D --> E[Test]
+    E --> F[Iterate]
+    F --> C
 ```
 
-## 🏃‍♂️ Quick Start
+## Product Highlights
+
+| Area | What You See | Why It Matters |
+| --- | --- | --- |
+| Immersive UI | Three.js-powered space background and layered visual depth | Makes the learning experience memorable |
+| Structured Storytelling | Dedicated sections for process, case study, insights, and reflection | Keeps the journey easy to follow |
+| Motion Design | Scroll-triggered reveal behavior and smooth transitions | Improves clarity and perceived polish |
+| Responsive Build | Mobile-first navigation and adaptable layout | Works cleanly across device sizes |
+| Real Case Study | Time Management App with problem framing and solution strategy | Connects theory to practice |
+
+## Tech Stack
+
+| Layer | Tools |
+| --- | --- |
+| Frontend | React 19, React DOM |
+| Build Tooling | Vite 6, ESLint 9 |
+| Visuals and Motion | Three.js, GSAP, Intersection Observer |
+| Deployment | Vercel |
+
+## Quick Start
 
 ### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn package manager
 
-### Installation & Setup
+- Node.js 18+ (Node.js 20 LTS recommended)
+- npm 9+
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/Design-Thinking.git
-   cd Design-Thinking/design-thinking
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open in browser**
-   ```
-   http://localhost:5173
-   ```
-
-### Available Scripts
+### Setup
 
 ```bash
-npm run dev       # Start development server
-npm run build     # Build for production
-npm run preview   # Preview production build
-npm run lint      # Run ESLint
+git clone https://github.com/Anish-2005/Design-Thinking.git
+cd Design-Thinking
+npm install
+npm run dev
 ```
 
-## 🎓 Course Learning Outcomes
+Open `http://localhost:5173`.
 
-### 🔑 Key Insights Gained
+### Scripts
 
-1. **🤝 Teamwork Excellence**
-   - *"My biggest takeaway was learning to work effectively as a team and lead towards excellence"*
-   - Developed skills in coordination, leadership, and collaborative problem-solving
+```bash
+npm run dev      # Start local dev server
+npm run build    # Create production build
+npm run preview  # Preview the production build
+npm run lint     # Run lint checks
+```
 
-2. **🔍 Root Cause Analysis**
-   - *"Finding the root cause of mishaps in time management is 50% of the problem solved"*
-   - Learned systematic approaches to problem identification and analysis
+## Project Structure
 
-3. **⚡ Prototyping Power**
-   - Discovered the transformative impact of the prototyping phase
-   - Experienced how visualization accelerates solution development
+```text
+.
+|-- public/
+|   |-- dt-logo.svg
+|   |-- dt.png
+|   |-- robots.txt
+|   `-- sitemap.xml
+|-- src/
+|   |-- components/
+|   |-- data/
+|   |-- hooks/
+|   |-- App.jsx
+|   |-- root.jsx
+|   `-- main.jsx
+|-- eslint.config.js
+|-- vite.config.js
+|-- vercel.json
+`-- README.md
+```
 
-### 📚 Academic Context
-- **Course**: Design Thinking (4th Semester)
-- **Focus**: Human-centered design methodology
-- **Outcome**: Practical application of design thinking principles
-- **Project Type**: Full-stack web application development
+## Contributing
 
-## 🎯 Personal Reflection
+Contributions are welcome. Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening a pull request.
 
-> *"I quite liked the journey of this Design Thinking course. From ideation to implementation to actual finishing of the product, I enjoyed the entire process of how it flowed through. I would actually like working on real projects in the future that add value to the real world."*
+## License
 
-This project represents more than just a course requirement—it's a testament to the power of design thinking in creating meaningful solutions that address real-world problems.
+This project is licensed under the MIT License. See [LICENSE](./LICENSE).
 
-## 🌐 Live Deployment
+## Contact
 
-The project is deployed and accessible at:
-- **Main Site**: [Design Thinking Lab](https://design-thinking-lab.vercel.app)
-- **Time Management App**: [Live Application](https://time-management-app-theta.vercel.app)
-
-## 🔮 Future Aspirations
-
-*"I would like to build real life apps which would actually benefit the people around, especially in college and engineering environments."*
-
-This project serves as a foundation for future endeavors in creating impactful applications that solve real problems in academic and professional settings.
-
-## 🤝 Connect & Collaborate
-
-Interested in design thinking, time management solutions, or collaborative projects?
-
-- **LinkedIn**: [Anish Seth](https://linkedin.com/in/anishseth)
-- **Email**: anishseth0510@gmail.com
-
-## 📄 License
-
-This project is part of an academic course and is shared for educational purposes. Feel free to explore, learn, and get inspired!
-
----
-
-### 🎭 *"Out of the Box" — Design Thinking Course Project*
-
-**Made with ❤️ by Anish Seth | Design Thinking Lab**
+- LinkedIn: [Anish Seth](https://linkedin.com/in/anishseth)
+- Email: anishseth0510@gmail.com
