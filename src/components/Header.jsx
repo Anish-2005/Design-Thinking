@@ -1,9 +1,9 @@
-const Header = ({ isScrolled, isMenuOpen, navItems, onNavigate, onToggleMenu }) => {
+const Header = ({ isScrolled, isMenuOpen, navItems, onNavigate, onToggleMenu, onCloseMenu }) => {
   return (
     <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>
       <div className="container header-inner">
         <button type="button" className="brand" onClick={() => onNavigate(navItems[0].ref)} aria-label="Go to top">
-          <div className="brand-mark">DT</div>
+          <img className="brand-mark" src="/dt-logo.svg" alt="Design Thinking Lab logo" width="44" height="44" />
           <div>
             <div className="brand-title">Design Thinking Lab</div>
             <div className="brand-subtitle">Human-centered innovation</div>
@@ -22,6 +22,7 @@ const Header = ({ isScrolled, isMenuOpen, navItems, onNavigate, onToggleMenu }) 
           type="button"
           className="menu-toggle"
           aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
           aria-label="Toggle menu"
           onClick={onToggleMenu}
         >
@@ -30,7 +31,14 @@ const Header = ({ isScrolled, isMenuOpen, navItems, onNavigate, onToggleMenu }) 
         </button>
       </div>
 
-      <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+      <button
+        type="button"
+        className={`mobile-backdrop ${isMenuOpen ? 'open' : ''}`}
+        aria-label="Close menu"
+        onClick={onCloseMenu}
+      />
+
+      <div id="mobile-menu" className={`mobile-menu ${isMenuOpen ? 'open' : ''}`} aria-hidden={!isMenuOpen}>
         {navItems.map((item) => (
           <button key={item.label} type="button" className="mobile-link" onClick={() => onNavigate(item.ref)}>
             {item.label}

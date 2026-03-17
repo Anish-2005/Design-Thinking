@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer-inner">
         <div className="brand-row">
-          <div className="brand-mark">DT</div>
+          <img className="brand-mark" src="/dt-logo.svg" alt="Design Thinking Lab logo" width="44" height="44" />
           <div>
             <div className="brand-title">Design Thinking Lab</div>
             <div className="brand-subtitle">Design thinking course project</div>

@@ -39,7 +39,7 @@ const ContactSection = ({ sectionRef }) => {
               human-centered design.
             </p>
             <div className="brand-row">
-              <div className="brand-mark">DT</div>
+              <img className="brand-mark" src="/dt-logo.svg" alt="Design Thinking Lab logo" width="44" height="44" />
               <div>
                 <p className="brand-title">Design Thinking Lab</p>
                 <p className="brand-subtitle">Transforming ideas into practical solutions</p>
