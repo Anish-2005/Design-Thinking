@@ -1,6 +1,6 @@
-const Hero = ({ onPrimary, onSecondary, badges }) => {
+const Hero = ({ onPrimary, onSecondary, badges, sectionRef }) => {
   return (
-    <section id="home" className="section hero">
+    <section ref={sectionRef} id="home" className="section hero">
       <div className="container hero-grid">
         <div className="hero-content" data-reveal style={{ '--delay': '0s' }}>
           <p className="eyebrow">Design Thinking Capstone</p>
