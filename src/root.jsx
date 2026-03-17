@@ -318,7 +318,7 @@ const Landing = () => {
                     </div>
                 </section>
 
-                <section ref={designThinkingRef} id="process" className="section">
+                <section ref={designThinkingRef} id="design-thinking" className="section">
                     <div className="container">
                         <div className="section-head" data-reveal>
                             <p className="section-kicker">The process</p>
